@@ -1,0 +1,21 @@
+{
+  "name": "ons-template",
+  "version": "0.0.1",
+  "homepage": "http://onsvisual.github.io/sk-ons-template",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build && touch build/.nojekyll",
+    "preview": "svelte-kit preview",
+    "deploy": "gh-pages -d build -t true"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.0",
+    "@sveltejs/adapter-static": "^1.0.0-next.17",
+    "@sveltejs/kit": "^1.0.0-next.252",
+    "gh-pages": "^3.2.3",
+    "parse-color": "^1.0.0",
+    "svelte": "^3.34.0",
+    "svelte-preprocess": "^4.7.3"
+  },
+  "type": "module"
+}
