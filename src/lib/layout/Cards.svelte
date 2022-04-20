@@ -26,10 +26,11 @@
 
 <div class="tiles">
   {#if title}
-	<h2 id="topics">{title}</h2>
+	<h2>{title}</h2>
   <slot name="meta"/>
   {/if}
-  <div bind:clientWidth={w}
+  <div
+    bind:clientWidth={w}
     class="tiles-grid margin-bottom"
     style:grid-template-columns="repeat({colwidth == 'full' ? '1fr' : 'auto-fit, minmax(min(' + defs[colwidth].w + 'px, 100%), 1fr))'}"
     style:grid-gap="{gridgap}px">
@@ -38,7 +39,7 @@
 </div>
 
 <style>
-  #topics {
+  h2 {
     display: inline-block;
   }
   .tiles-grid {

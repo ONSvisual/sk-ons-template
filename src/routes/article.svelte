@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { assets } from "$app/paths";
+  import { base } from "$app/paths";
 
 	import Titleblock from "$lib/layout/Titleblock.svelte";
 	import Headline from "$lib/layout/partial/Headline.svelte";
@@ -24,7 +24,7 @@
 
 <Titleblock
 	breadcrumb="{[
-    {label: 'Home', url: `${assets}/`},
+    {label: 'Home', url: `${base}/`},
     {label: 'Article page'}
   ]}"
   date="DD Month YYYY"
@@ -66,13 +66,13 @@
     <p>This is another paragraph of text.</p>
   </Section>
 
-  <ButtonLink url="/">
+  <ButtonLink url="{base}/">
     View all data used in this article
   </ButtonLink>
   <Linkbox
     title="Related"
     links="{[
-      {label: 'Article one title', url: '/', type: 'Article', meta: '31 January 2022', description: 'This is a description of the article.'},
-      {label: 'Article two title', url: '/', type: 'Article', meta: '16 January 2022', description: 'This is a description of the article.'}
+      {label: 'Article one title', url: `${base}/`, type: 'Article', meta: '31 January 2022', description: 'This is a description of the article.'},
+      {label: 'Article two title', url: `${base}/`, type: 'Article', meta: '16 January 2022', description: 'This is a description of the article.'}
     ]}"/>
 </Article>

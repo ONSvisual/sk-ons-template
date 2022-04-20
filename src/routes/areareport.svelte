@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { assets } from "$app/paths";
+  import { base } from "$app/paths";
 
 	import Titleblock from "$lib/layout/Titleblock.svelte";
 	import Headline from "$lib/layout/partial/Headline.svelte";
@@ -28,15 +28,15 @@
 <Titleblock
   background="none"
 	breadcrumb="{[
-    {label: 'Home', url: `${assets}/`},
-    {label: 'Area name', url: `${assets}/`},
+    {label: 'Home', url: `${base}/`},
+    {label: 'Area name', url: `${base}/`},
     {label: 'Changes over time'}
   ]}"
   contents="{[
-    {label: 'Overview', url: '/'},
-    {label: 'Facts and figures', url: '/'},
+    {label: 'Overview', url: `${base}/`},
+    {label: 'Facts and figures', url: `${base}/`},
     {label: 'Changes over time'},
-    {label: 'Latest results and insights', url: '/'}
+    {label: 'Latest results and insights', url: `${base}/`}
   ]}">
 	<Headline>Area name</Headline>
   <strong>Area type:</strong> GSS Code
@@ -79,14 +79,14 @@
     mode="neutral"
     title="Area report data"
     links="{[
-      {label: 'Dataset one title', url: '/', type: 'Dataset', meta: '31 January 2022', description: 'This is a description of the dataset.'},
-      {label: 'Dataset two title', url: '/', type: 'Dataset', meta: '16 January 2022', description: 'This is a description of the dataset.'}
+      {label: 'Dataset one title', url: `${base}/`, type: 'Dataset', meta: '31 January 2022', description: 'This is a description of the dataset.'},
+      {label: 'Dataset two title', url: `${base}/`, type: 'Dataset', meta: '16 January 2022', description: 'This is a description of the dataset.'}
     ]}"/>
 
   <Linkbox
     mode="neutral"
     links="{[
-      {label: 'Article one title', url: '/', type: 'Article', meta: '31 January 2022', description: 'This is a description of the article.'},
-      {label: 'Article two title', url: '/', type: 'Article', meta: '16 January 2022', description: 'This is a description of the article.'}
+      {label: 'Article one title', url: `${base}/`, type: 'Article', meta: '31 January 2022', description: 'This is a description of the article.'},
+      {label: 'Article two title', url: `${base}/`, type: 'Article', meta: '16 January 2022', description: 'This is a description of the article.'}
     ]}"/>
 </Article>

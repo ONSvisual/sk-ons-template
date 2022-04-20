@@ -9,14 +9,13 @@ const config = {
 		adapter: adapter({
 			// Options below are defaults
 			pages: 'build',
-			assets: 'build',
-			fallback:'404.html'
+			assets: 'build'
 		}),
 		prerender: {
+			default: true,
 			enabled: production
 		},
 		paths: {
-			assets: production ? 'https://onsvisual.github.io/sk-ons-template' : '',
 			base: production ? '/sk-ons-template' : ''
 		}
 	}

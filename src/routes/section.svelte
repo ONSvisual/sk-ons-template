@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { assets } from "$app/paths";
+  import { base } from "$app/paths";
 
 	import Titleblock from "$lib/layout/Titleblock.svelte";
 	import Headline from "$lib/layout/partial/Headline.svelte";
@@ -23,7 +23,7 @@
 <Titleblock
   mode="page"
 	breadcrumb="{[
-    {label: 'Home', url: `${assets}/`},
+    {label: 'Home', url: `${base}/`},
     {label: 'Section page'}
   ]}">
 	<Headline>Section title</Headline>
@@ -34,15 +34,15 @@
 	<Cards title="In this section">
 		<CardSection
 			title="Section one"
-			url="/"
+			url="{base}/"
 			description="A short description of this section"/>
 		<CardSection
 			title="Section two"
-			url="/"
+			url="{base}/"
 			description="A short description of this section"/>
 		<CardSection
 			title="Section three"
-			url="/"
+			url="{base}/"
 			description="A short description of this section"
 			image="https://www.ons.gov.uk/img/t1-local.png"/>
 	</Cards>

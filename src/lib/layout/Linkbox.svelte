@@ -26,7 +26,7 @@
   <ul class="list--neutral margin-bottom--0">
     {#each links as link}
     <li class="margin-bottom--3">
-    <a href="/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/bulletins/deathsregisteredweeklyinenglandandwalesprovisional/weekending25february2022" class="tile-neutral-content__title underline-link">Deaths registered weekly in England and Wales, provisional</a>
+    <a href="{link.url}">{link.label}</a>
     <p class="tile-neutral-content__meta">
       {link.type}
       <span class="text--aluminium">|</span> {link.meta}

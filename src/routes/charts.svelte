@@ -1,10 +1,10 @@
 <script context="module">
 	const prerender = true;
 
-  import { assets } from "$app/paths";
+  import { base } from "$app/paths";
 
 	export async function load({ fetch }) {
-    let response = await fetch(assets + "/data/data.json");
+    let response = await fetch(base + "/data/data.json");
     let data = await response.json();
     
     return {
@@ -37,7 +37,7 @@
 <Titleblock
   mode="page"
 	breadcrumb="{[
-    {label: 'Home', url: `${assets}/`},
+    {label: 'Home', url: `${base}/`},
     {label: 'Charts demo'}
   ]}">
 	<Headline>Charts demo</Headline>

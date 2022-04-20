@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  import { assets } from "$app/paths";
+  import { base } from "$app/paths";
 
 	import Content from "$lib/layout/Content.svelte";
 	import Navbox from "$lib/layout/partial/Navbox.svelte";
@@ -20,17 +20,17 @@
 	<meta name="description" content="This is a description of the page." />
 </svelte:head>
 
-<Banner title="This is a banner" label="This is a link on a banner" url="/"/>
+<Banner title="This is a banner" label="This is a link on a banner" url="{base}/"/>
 
 <Content>
 	<Navbox
 		title="List of links (click to view templates)"
 		links={[
 			{label: "Home"},
-			{label: "Section page", url: `${assets}/section`},
-			{label: "Article page", url: `${assets}/article`},
-			{label: "Area report page", url: `${assets}/areareport`},
-			{label: "Charts demo", url: `${assets}/charts`}
+			{label: "Section page", url: `${base}/section`},
+			{label: "Article page", url: `${base}/article`},
+			{label: "Area report page", url: `${base}/areareport`},
+			{label: "Charts demo", url: `${base}/charts`}
 		]}/>
 
 	<Cards title="Grid of text cards" subtitle="optional">
@@ -65,22 +65,22 @@
 	<Cards title="Featured link cards" subtitle="optional" colwidth="narrow">
 		<CardFeature
 			title="Local statistics"
-			url="/"
+			url="{base}/"
 			description="Where to find statistics covering specific areas"
 			image="https://static.ons.gov.uk/images/cf4ffa0c-d7ea-43a9-85a4-03ea05bbaaaf/original/local-statistics.png"/>
 		<CardFeature
 			title="Secure Research Service"
-			url="/"
+			url="{base}/"
 			description="Find out how ONS secure data could help your research project"
 			image="https://static.ons.gov.uk/images/9eb49f05-66d0-4ab9-9fcb-e5a4e523460f/original/data-strategy.png"/>
 		<CardFeature
 			title="COVID-19 Infection Survey"
-			url="/"
+			url="{base}/"
 			description="Find out more if you have been contacted to take part"
 			image="https://static.ons.gov.uk/images/b72dc597-81e0-47c3-a331-2759a207524b/original/covid-infection-survey@2x.png"/>
 		<CardFeature
 			title="Other government statistics"
-			url="/"
+			url="{base}/"
 			description="Official Statistics available from across government"
 			image="https://static.ons.gov.uk/images/8c1ab5f0-f830-408b-bb18-0c025054e8c8/original/other-govt-statistics.png"/>
 	</Cards>
