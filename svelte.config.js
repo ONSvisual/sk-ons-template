@@ -13,11 +13,13 @@ const config = {
 		}),
 		prerender: {
 			default: true,
-			enabled: production
+			enabled: production,
+			onError: 'continue'
 		},
 		paths: {
 			base: production ? '/sk-ons-template' : ''
-		}
+		},
+		trailingSlash: 'always'
 	}
 };
 
