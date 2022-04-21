@@ -17,7 +17,7 @@ const config = {
 			onError: 'continue'
 		},
 		paths: {
-			base: production ? '/sk-ons-template' : ''
+			base: production ? '/sk-ons-template-{{.CDNURL}}' : ''
 		},
 		trailingSlash: 'always'
 	}
