@@ -1,4 +1,6 @@
 // CORE CONFIG
+export const analyticsId = "GTM-MBCBVQS";
+
 export const themes = {
   'light': {
 		'name': 'light',
