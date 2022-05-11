@@ -14,9 +14,7 @@
 
   // Check if usage cookies are allowed (for Google Analytics + Hotjar)
   function getUsageCookieValue() {
-    var cookiesPolicyCookie = document.cookie.match(
-      "(^|;) ?cookies_policy=([^;]*)(;|$)"
-    );
+    var cookiesPolicyCookie = document.cookie.match(new RegExp("(^|;) ?cookies_policy=([^;]*)(;|$)"));
     if (cookiesPolicyCookie) {
       var decodedCookie = decodeURIComponent(cookiesPolicyCookie[2]);
       var cookieValue = JSON.parse(decodedCookie);
@@ -27,15 +25,19 @@
 
   function extractDomainFromUrl(e) {
     if (0 <= e.indexOf("localhost") || 0 <= e.indexOf("127.0.0.1")) return "localhost";
-    var t = new RegExp("(.co.uk|.gov.uk)"),
-      t = e.match(t)[0];
-    return "." + e.replace(t, "").split(".").pop() + t
+    var t = e.match(new RegExp("(.co.uk|.gov.uk)"));
+    if (t) {
+      return "." + e.replace(t[0], "").split(".").pop() + t;
+    } else {
+      return e;
+    }
   }
 
   function setCookie(option) {
     let oneYearInSeconds = 60 * 60 * 24 * 365;
     let url = window.location.hostname;
     let cookiesDomain = extractDomainFromUrl(url);
+    console.log(cookiesDomain);
     let cookiesPreference = !0;
     let encodedCookiesPolicy = `%7B%22essential%22%3Atrue%2C%22usage%22%3A${option == 'all' ? 'true' : 'false'}%7D`;
     let cookiesPath = "/";
